@@ -12,6 +12,7 @@ Group:          System/Libraries
 License:        LGPLv2+
 URL:            http://www.rxtx.org/
 Source0:        http://rxtx.qbang.org/pub/rxtx/%{name}-%{upstream_version}.zip
+BuildRequires:  java-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description

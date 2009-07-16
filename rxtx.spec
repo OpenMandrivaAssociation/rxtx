@@ -8,7 +8,7 @@ Name:           rxtx
 Version:        2.1.7r2
 Release:        %mkrel 1
 Summary:        serial and parallel I/O libraries supporting Sun's CommAPI
-Group:          System Environment/Libraries
+Group:          System/Libraries
 License:        LGPLv2+
 URL:            http://www.rxtx.org/
 Source0:        http://rxtx.qbang.org/pub/rxtx/%{name}-%{upstream_version}.zip
@@ -30,7 +30,7 @@ developing applications that use %{name}.
 
 %package -n %{libname}
 Summary:        Libraries for %{name}
-Group:          System Environment/Libraries
+Group:          System/Libraries
 
 %description -n %{libname}
 The libraries for %{name}.

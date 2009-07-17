@@ -21,8 +21,7 @@ Java Development Toolkit (JDK) moving towards compliance with Sun's CommAPI.
 
 %package -n %{develname}
 Summary:        Development files for %{name}
-Group:          Development/Libraries
-Requires:       pkgconfig
+Group:          System/Libraries
 Requires:       %{libname} = %{version}-%{release}
 
 %description -n %{develname}

@@ -5,7 +5,7 @@
 %define develname %mklibname rxtx -d
 
 Name:           rxtx
-Version:        2.1.7r2
+Version:        2.1.7.2
 Release:        %mkrel 1
 Summary:        serial and parallel I/O libraries supporting Sun's CommAPI
 Group:          System/Libraries

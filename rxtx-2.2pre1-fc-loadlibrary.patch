@@ -1,0 +1,78 @@
+diff -up ./CNI/CommPortIdentifier.java.load ./CNI/CommPortIdentifier.java
+diff -up ./CNI/RXTXCommDriver.java.load ./CNI/RXTXCommDriver.java
+diff -up ./CNI/RXTXPort.java.load ./CNI/RXTXPort.java
+diff -up ./CNI/Zystem.java.load ./CNI/Zystem.java
+diff -up ./INSTALL.load ./INSTALL
+diff -up ./contrib/MAcOSX/RXTXInstaller/build/Debug/RXTXInstaller.jar.load ./contrib/MAcOSX/RXTXInstaller/build/Debug/RXTXInstaller.jar
+diff -up ./contrib/MAcOSX/RXTXInstaller/jnlp/RXTXInstaller.jar.load ./contrib/MAcOSX/RXTXInstaller/jnlp/RXTXInstaller.jar
+diff -up ./src/gnu/io/CommPortIdentifier.java.load ./src/gnu/io/CommPortIdentifier.java
+--- ./src/gnu/io/CommPortIdentifier.java.load	2010-02-11 17:30:43.371679285 +0100
++++ ./src/gnu/io/CommPortIdentifier.java	2010-02-11 17:32:38.026689711 +0100
+@@ -120,7 +120,7 @@ public class CommPortIdentifier extends 
+ 			if (debug)
+ 				System.out.println("Have not implemented native_psmisc_report_owner(PortName)); in CommPortIdentifier");
+ 		}
+-		System.loadLibrary( "rxtxSerial" );
++		System.load("@JNIPATH@/" + System.mapLibraryName( "rxtxSerial" ));
+ 	}
+ 	CommPortIdentifier ( String pn, CommPort cp, int pt, CommDriver driver) 
+ 	{
+diff -up ./src/gnu/io/I2C.java.load ./src/gnu/io/I2C.java
+--- ./src/gnu/io/I2C.java.load	2010-02-11 17:30:43.373679172 +0100
++++ ./src/gnu/io/I2C.java	2010-02-11 17:33:12.727679091 +0100
+@@ -74,7 +74,7 @@ final class I2C  extends  I2CPort {
+ 
+ 	static 
+ 	{
+-		System.loadLibrary( "rxtxI2C" );
++		System.load("@JNIPATH@/" + System.mapLibraryName( "rxtxI2C" ));
+ 		Initialize();
+ 	}
+ 
+diff -up ./src/gnu/io/RS485.java.load ./src/gnu/io/RS485.java
+--- ./src/gnu/io/RS485.java.load	2010-02-11 17:30:43.372692498 +0100
++++ ./src/gnu/io/RS485.java	2010-02-11 17:32:56.269471487 +0100
+@@ -71,7 +71,7 @@ final class RS485  extends  RS485Port {
+ 
+ 	static 
+ 	{
+-		System.loadLibrary( "rxtxRS485" );
++		System.load("@JNIPATH@/" + System.mapLibraryName( "rxtxRS485" ));
+ 		Initialize();
+ 	}
+ 
+diff -up ./src/gnu/io/RXTXVersion.java.load ./src/gnu/io/RXTXVersion.java
+--- ./src/gnu/io/RXTXVersion.java.load	2010-02-11 17:30:43.369692527 +0100
++++ ./src/gnu/io/RXTXVersion.java	2010-02-11 17:35:43.756816257 +0100
+@@ -90,7 +90,8 @@ public class RXTXVersion
+ 	public static native String nativeGetVersion();
+ 
+  	static void loadLibrary (String baseName) {
+-		if (System.getProperty("sun.arch.data.model", "").equals("64")) {
++		System.load("@JNIPATH@/" + System.mapLibraryName(baseName));
++		/*if (System.getProperty("sun.arch.data.model", "").equals("64")) {
+ 			try {
+ 				System.loadLibrary(baseName + "64");
+ 			} catch (UnsatisfiedLinkError ex64) {
+@@ -110,7 +111,7 @@ public class RXTXVersion
+ 					throw ex32;
+ 				}
+ 			}
+-		}
++		}*/
+ 	}
+ 
+ }
+diff -up ./src/gnu/io/Raw.java.load ./src/gnu/io/Raw.java
+--- ./src/gnu/io/Raw.java.load	2010-02-11 17:30:43.368679594 +0100
++++ ./src/gnu/io/Raw.java	2010-02-11 17:31:56.086923010 +0100
+@@ -71,7 +71,7 @@ final class Raw  extends  RawPort {
+ 
+ 	static 
+ 	{
+-		System.loadLibrary( "rxtxRaw" );
++		System.load("@JNIPATH@/" + System.mapLibraryName( "rxtxRaw" ));
+ 		Initialize();
+ 	}
+ 
+diff -up ./src/gnu/io/Zystem.java.load ./src/gnu/io/Zystem.java

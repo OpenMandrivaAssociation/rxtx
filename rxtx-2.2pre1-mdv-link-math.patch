@@ -1,0 +1,13 @@
+Index: rxtx-2.2pre1/Makefile.in
+===================================================================
+--- rxtx-2.2pre1.orig/Makefile.in
++++ rxtx-2.2pre1/Makefile.in
+@@ -597,7 +597,7 @@ $(target_triplet)/librxtx%.@LIB_EXTENSIO
+ 	if [ "$*" = "Serial" ]; then 					\
+ 		$(LIBTOOLC) $(SPATH)/fuserImp.@EXTENSION@ -o		\
+ 			$(TOP)/$(DEST)/fuserImp.@OBJECT_EXTENSION@;	\
+-		@LINK@ $(TOP)/$(DEST)/$*Imp.@OBJECT_EXTENSION@  	\
++		@LINK@ -lm $(TOP)/$(DEST)/$*Imp.@OBJECT_EXTENSION@  	\
+ 			$(TOP)/$(DEST)/fuserImp.@OBJECT_EXTENSION@; 	\
+ 	else								\
+ 		@LINK@ $(TOP)/$(DEST)/$*Imp.@OBJECT_EXTENSION@; 	\

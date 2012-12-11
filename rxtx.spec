@@ -58,3 +58,20 @@ rm -rf %{buildroot}
 %doc RMISecurityManager.html SerialPortInstructions.txt
 %{_javadir}/RXTXcomm.jar
 %{_jnidir}/*.so
+
+
+%changelog
+* Sat Oct 29 2011 Andrey Smirnov <asmirnov@mandriva.org> 2.2-1.pre1.20111029mdv2011.0
++ Revision: 707832
+- Update to fresh CVS snapshot
+  JNI libraries placed to jnidir
+  Consolidated to single package because separate ones are useless
+
+* Sat Jul 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.1.7.2-1mdv2010.0
++ Revision: 399666
+- use same version as gentoo
+
+* Fri Jul 17 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.1.7r2-1mdv2010.0
++ Revision: 396931
+- import rxtx
+

@@ -10,7 +10,7 @@ Release:	%mkrel %{mdvrel}%{?prerel:.%prerel}%{?rev:.%rev}
 Summary:	Serial and parallel I/O libraries supporting Sun's CommAPI
 Group:		System/Libraries
 License:	LGPLv2+
-URL:		http://www.rxtx.qbang.org/
+URL:		https://www.rxtx.qbang.org/
 #Source0:	http://rxtx.qbang.org/pub/rxtx/%{name}-%{upver}.zip
 # The source for this package was pulled from upstream's vcs.  Use the
 # following commands to generate the tarball:

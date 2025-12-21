@@ -20,6 +20,11 @@ Source0:	%{name}-%{upver}.tar.bz2
 Patch0:		rxtx-2.2pre1-fc-loadlibrary.patch
 Patch1:		rxtx-2.2pre1-mdv-all-ports.patch
 Patch2:		rxtx-2.2pre1-mdv-link-math.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	java-devel >= 0:1.6.0
 
 %description

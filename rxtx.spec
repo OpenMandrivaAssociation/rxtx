@@ -6,7 +6,7 @@
 
 Name:		rxtx
 Version:	%version
-Release:	%mkrel %{mdvrel}%{?prerel:.%prerel}%{?rev:.%rev}
+Release:	%{mdvrel}%{?prerel:.%prerel}%{?rev:.%rev}.1
 Summary:	Serial and parallel I/O libraries supporting Sun's CommAPI
 Group:		System/Libraries
 License:	LGPLv2+
